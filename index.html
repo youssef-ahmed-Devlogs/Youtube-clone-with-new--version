@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="youtube">
+      <div class="container">
+        <div class="youtube-content">
+          <aside class="border-radius2 pz2 trn-4 scroll-option" id="sidebar">
+            <a href="index.html" class="youtube-logo">
+              <img src="images/logos/youtube-logo-light.png" alt="" />
+            </a>
+            <!-- Side Youtube Pages List -->
+            <ul class="side-yt-pages-list side-list">
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fas fa-play"></i> Library</a>
+              </li>
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fas fa-history"></i> History</a>
+              </li>
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fab fa-youtube"></i> Your Videos</a>
+              </li>
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fas fa-clock"></i> Watch later</a>
+              </li>
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fas fa-thumbs-up"></i> Liked Videos</a>
+              </li>
+              <div class="more">
+                <li class="trn-4 hover-light-3">
+                  <a href="#"><i class="fas fa-film"></i> Library</a>
+                </li>
+                <li class="trn-4 hover-light-3">
+                  <a href="#"><i class="fas fa-history"></i> History</a>
+                </li>
+              </div>
+              <li class="trn-4 hover-light-3">
+                <a class="show-more">
+                  <i class="fas fa-caret-down"></i> <span>Show More</span>
+                </a>
+              </li>
+            </ul>
+            <!-- Subscriptions -->
+            <h5>SUBSCRIPTIONS</h5>
+            <ul class="side-subscriptions-list side-list">
+              <div class="subscriptions"></div>
+              <div class="more"></div>
+              <li class="trn-4 hover-light-3">
+                <a class="show-more">
+                  <i class="fas fa-caret-down"></i> <span>Show More</span>
+                </a>
+              </li>
+            </ul>
+            <!-- MORE FROM YOUTUBE -->
+            <h5>MORE FROM YOUTUBE</h5>
+            <ul class="side-more-from-yt-list side-list">
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fab fa-youtube"></i> Youtube Premium</a>
+              </li>
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fas fa-gamepad"></i> Gaming</a>
+              </li>
+              <li class="trn-4 hover-light-3">
+                <a href="#"><i class="fas fa-satellite-dish"></i> Live</a>
+              </li>
+              <div class="more">
+                <li class="trn-4 hover-light-3">
+                  <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+              </div>
+              <li class="trn-4 hover-light-3">
+                <a class="show-more">
+                  <i class="fas fa-caret-down"></i> <span>Show More</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <!-- Homepage -->
+          <section class="homepage">
+            <nav class="border-radius2">
+              <ul class="nav-list">
+                <li class="nav-icon sidebar-btn">
+                  <a href="#" class="border-radius1 trn-4 nav-link">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </li>
+                <li class="nav-icon">
+                  <a href="#" class="border-radius1 trn-4 nav-link active">
+                    <i class="fas fa-home"></i>
+                  </a>
+                </li>
+                <li class="nav-icon">
+                  <a href="#" class="border-radius1 trn-4 nav-link hover-light">
+                    <i class="fas fa-fire"></i>
+                  </a>
+                </li>
+                <li class="nav-icon">
+                  <a href="#" class="border-radius1 trn-4 nav-link hover-light">
+                    <i class="fas fa-film"></i>
+                  </a>
+                </li>
+                <li class="search">
+                  <input
+                    class="border-radius1 trn-4"
+                    type="text"
+                    placeholder="search..."
+                  />
+                </li>
+                <li class="nav-icon">
+                  <a href="#" class="border-radius1 trn-4 nav-link hover-light">
+                    <i class="fas fa-video"></i>
+                  </a>
+                </li>
+                <li class="nav-icon notification-btn">
+                  <a href="#" class="border-radius1 trn-4 nav-link">
+                    <i class="fas fa-bell"></i>
+                  </a>
+                </li>
+                <!-- Nav >> Notification Dom -->
+                <ul class="notification-settings scroll-option">
+                  <h3>Notification</h3>
+                  <div class="content"></div>
+                </ul>
+                <!-- Nav >> USER -->
+                <li class="nav-icon user">
+                  <a href="#" class="border-radius1 trn-4 nav-link">
+                    <div class="user-icon circle-img img-4">
+                      <img
+                        src="images/subscriptions/youssef-devlogs.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <i class="fas fa-caret-down"></i>
+                  </a>
+                </li>
+                <!-- Nav >> USER Settings -->
+                <ul class="user-settings">
+                  <li class="user-my-channel hover-light-3 trn-4">
+                    <a href="#">
+                      <div class="circle-img img-8">
+                        <img
+                          src="images/subscriptions/youssef-devlogs.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h3>My Channel<span>Youssef Devlogs</span></h3>
+                    </a>
+                  </li>
+                  <li class="hover-light-3 trn-4 toggle-dark-li">
+                    <label for="dark-mode-toggle" style="user-select: none">
+                      <div class="toggle-dark">
+                        <h5>Dark Mode</h5>
+                        <i class="fas fa-toggle-off dark-toggle-icon trn-4"></i>
+                      </div>
+                      <input
+                        type="checkbox"
+                        id="dark-mode-toggle"
+                        style="display: none"
+                      />
+                    </label>
+                  </li>
+                  <li class="hover-light-3 trn-4">
+                    <a href="#">
+                      Youtube Studio
+                      <i class="fas fa-magic"></i>
+                    </a>
+                  </li>
+                  <li class="hover-light-3 trn-4">
+                    <a href="#">
+                      Settings
+                      <i class="fas fa-cog"></i>
+                    </a>
+                  </li>
+                  <li class="hover-light-3 trn-4">
+                    <a href="#">
+                      Help
+                      <i class="fas fa-question-circle"></i>
+                    </a>
+                  </li>
+                  <li class="hover-light-3 trn-4">
+                    <a href="#">
+                      Logout
+                      <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </nav>
+            <div class="category">
+              <button class="next-btn">&gt;</button>
+              <button class="prev-btn">&lt;</button>
+              <div class="category-swepe scroll-option">
+                <div class="category-content trn-4">
+                  <a href="#" class="active-light-dark">All</a>
+                  <a href="#">Javascript</a>
+                  <a href="#">El Zero Web School</a>
+                  <a href="#">قران</a>
+                  <a href="#">Gaming</a>
+                  <a href="#">Pubg</a>
+                  <a href="#">Trending</a>
+                  <a href="#">Droos Online</a>
+                  <a href="#">امير منير</a>
+                  <a href="#">Unique Coderz Academy</a>
+                  <a href="#">برمج Barmej</a>
+                  <a href="#">Css</a>
+                  <a href="#">Html</a>
+                  <a href="#">React js</a>
+                  <a href="#">Angular js</a>
+                  <a href="#">Vue js</a>
+                  <a href="#">jQuery</a>
+                  <a href="#">Football</a>
+                  <a href="#">Call Of Duty</a>
+                  <a href="#">Gaming 3rbe</a>
+                </div>
+              </div>
+            </div>
+            <div class="home-page-ads border-radius2">
+              <div class="ads-content">
+                <div class="ads-image">
+                  <img
+                    class="img-w100"
+                    src="images/youtube-ads/youtube-ads-1.jpg"
+                    alt="ads"
+                  />
+                </div>
+                <div class="ads-description">
+                  <div class="channel-image border-radius2 img-8">
+                    <img
+                      class="img-w100"
+                      src="images/logos/mbc-masr-logo.png"
+                      alt="mbc-masr-logo"
+                    />
+                  </div>
+                  <div class="ads-channel">
+                    <h4 class="ads-title">
+                      مسلسل الاختيار الجزء الثاني قريبا في رمضان
+                    </h4>
+                    <h5 class="channel-name">
+                      <i class="fas fa-ad ad-icon"></i>
+                      Mbc Masr
+                      <i class="fas fa-check-circle verification-icon"></i>
+                    </h5>
+                    <a class="see-more border-radius1" href="#">See More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
