@@ -105,7 +105,7 @@ function sidebarToggle(e) {
     }, 300);
   } else {
     sidebar.style.transform = "translate(0)";
-    homepage.style.width = "85%";
+    homepage.style.width = "83%";
     setTimeout(() => {
       sidebar.style.display = "block";
     }, 300);
