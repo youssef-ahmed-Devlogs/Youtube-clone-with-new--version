@@ -9,9 +9,23 @@
     left: 0;
     top: 0;
   }
+}
 
+@media (max-width: 1000px) {
+  .side-subscriptions-list {
+    line-height: 4 !important;
+  }
+}
+
+/* Navbar */
+@media (max-width: 1460px) {
   nav ul.nav-list {
     flex-direction: row-reverse;
+  }
+
+  .user-settings,
+  .notification-settings {
+    left: 0;
   }
 
   .homepage {
@@ -20,24 +34,9 @@
   }
 }
 
-/* Navbar */
 @media (max-width: 1000px) {
-  :root {
-    font-size: 8px;
-  }
-
-  .container {
-    padding: 20px 10px;
-  }
-
   nav ul.nav-list li.search {
     width: 30%;
-  }
-}
-
-@media (min-width: 736px) {
-  .search-icon {
-    display: none;
   }
 }
 
@@ -50,19 +49,21 @@
     background: none;
     width: fit-content;
   }
+}
 
-  .d-none-m2 {
-    display: none;
+@media (max-width: 700px) {
+  nav ul.nav-list li.search {
+    width: 50%;
   }
 }
 
 @media (max-width: 540px) {
-  :root {
-    font-size: 6px;
-  }
-
   nav ul.nav-list a.nav-link {
     width: 40px;
+    height: 40px;
+  }
+
+  nav ul.nav-list li.search input {
     height: 40px;
   }
 
@@ -81,10 +82,6 @@
     padding: 10px 60px;
   }
 
-  .d-none-m1 {
-    display: none;
-  }
-
   .hover-light-3 {
     padding: 0 14px;
   }
@@ -94,6 +91,14 @@
   .user-settings .user-my-channel a {
     justify-content: none;
     padding: 10px 0;
+  }
+}
+
+/* Category Tags */
+@media (max-width: 1000px) {
+  .next-btn,
+  .prev-btn {
+    display: none;
   }
 }
 
@@ -119,5 +124,51 @@
 @media (max-width: 800px) {
   .grid-1 {
     grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+/* Fonts And Container */
+@media (max-width: 1000px) {
+  :root {
+    font-size: 8px;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    font-size: 6px;
+  }
+}
+
+/* Hide And Show Media */
+@media (max-width: 700px) {
+  .d-none-m1 {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .m-nav-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 735px) {
+  .d-none-m2 {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .m-500-hide {
+    display: none;
+  }
+
+  .m-500-show {
+    display: block;
   }
 }
