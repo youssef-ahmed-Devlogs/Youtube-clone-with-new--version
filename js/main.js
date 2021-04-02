@@ -251,19 +251,27 @@ function notificationSettings(e) {
   isNotificationOpen = !isNotificationOpen;
 }
 
-// class isOpen {
-//   constructor() {
-//     this.open = false;
-//   }
+/**** Nav >> For Hide And Show Search Input ****/
+let searchInput = document.querySelector(".search");
+let nav_user_Icon = document.querySelector(".nav-user-icon");
+let navNotiIcon = document.querySelector(".nav-noti-icon");
+let navVideoIcon = document.querySelector(".nav-video-icon");
+let searchIcon = document.querySelector(".nav-search-icon");
+// Exists sidebarBtn
 
-//   toggle() {
-//     if (!this.open) {
-//       console.log();
-//     } else {
-//     }
-//     this.open = !this.open;
-//   }
-// }
+console.log(sidebarBtn);
+
+searchIcon.addEventListener("click", toggleSearch);
+
+function toggleSearch(e) {
+  e.preventDefault();
+  searchInput.classList.toggle("m-700-show-search");
+  searchInput.style.animation = "fadeIn .5s ease-in-out";
+  nav_user_Icon.classList.toggle("m-700-hide");
+  navNotiIcon.classList.toggle("m-700-hide");
+  navVideoIcon.classList.toggle("m-700-hide");
+  sidebarBtn.classList.toggle("m-700-hide");
+}
 
 /****  Category Sweper ****/
 let nextBtn = document.querySelector(".next-btn");
@@ -293,6 +301,9 @@ function prevCategory() {
     categoryContent.style.transform = `translateX(${moveing}px)`;
   }
 }
+
+/****  Home page ads on mobile ****/
+let adsImage = document.querySelector(".ads-image img");
 
 /****  Videos Draw Ui****/
 let videosContentDom = document.querySelector(".videos-content");
