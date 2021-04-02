@@ -11,9 +11,10 @@
   }
 }
 
+/* subscriptions */
 @media (max-width: 1000px) {
   .side-subscriptions-list {
-    line-height: 4 !important;
+    line-height: 4.5 !important;
   }
 }
 
@@ -151,6 +152,7 @@
 @media (max-width: 1768px) {
   .grid-4 {
     grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px;
   }
 }
 

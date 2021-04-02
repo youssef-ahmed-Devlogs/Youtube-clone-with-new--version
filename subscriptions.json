@@ -1,38 +1,47 @@
 [
     {
         "name": "Elzero Web School",
-        "image": "images/subscriptions/elzero.jpg"
+        "image": "images/subscriptions/elzero.jpg",
+        "link": "https://www.youtube.com/channel/UCSNkfKl4cU-55Nm-ovsvOHQ"
     },
     {
         "name": "دروس أونلاين",
-        "image": "images/subscriptions/droosonline.jpg"
+        "image": "images/subscriptions/droosonline.jpg",
+        "link": "https://www.youtube.com/channel/UCEHvaZ336u7TIsUQ2c6SAeQ"
     },
     {
         "name": "أمير منير ",
-        "image": "images/subscriptions/amir-mounir.jpg"
+        "image": "images/subscriptions/amir-mounir.jpg",
+        "link": "https://www.youtube.com/channel/UCp479sePW_R7NM8AhPyUDoQ"
     },
     {
         "name": "Codezilla",
-        "image": "images/subscriptions/codezilla.jpg"
+        "image": "images/subscriptions/codezilla.jpg",
+        "link": "https://www.youtube.com/channel/UCveX_0uBOHVHbpV838OGXVA"
     },
     {
         "name": "Omardizer",
-        "image": "images/subscriptions/omardizer.jpg"
+        "image": "images/subscriptions/omardizer.jpg",
+        "link": "https://www.youtube.com/channel/UC1FYFqgdW_1LueJTmXn-8cg"
     },
     {
         "name": "برمج Barmej",
-        "image": "images/subscriptions/barmej.jpg"
+        "image": "images/subscriptions/barmej.jpg",
+        "link": "https://www.youtube.com/channel/UCgPcdAKRzBjRP4zq-x5KfWg"
     },
     {
         "name": "Unique Coderz Academy",
-        "image": "images/subscriptions/unique-coderz-academy.jpg"
+        "image": "images/subscriptions/unique-coderz-academy.jpg",
+        "link": "https://www.youtube.com/channel/UCq_xgufsy1KrGsmJq7mFH-g"
     },
     {
         "name": "Hassouna Academy",
-        "image": "images/subscriptions/hassouna-academy.jpg"
+        "image": "images/subscriptions/hassouna-academy.jpg",
+        "link": "https://www.youtube.com/channel/UC5PbBz_roYczmUR6gg_OAxw"
     },
     {
         "name": "Mohamed Abusrea",
-        "image": "images/subscriptions/mohamed-abusrea.jpg"
+        "image": "images/subscriptions/mohamed-abusrea.jpg",
+        "link": "https://www.youtube.com/channel/UCJu5uNExWKx1Vrv6Ah5SHfA"
     }
 ]

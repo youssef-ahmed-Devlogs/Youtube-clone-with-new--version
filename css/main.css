@@ -19,6 +19,9 @@
   --dark-gray: #676767;
   --red: #ed0105;
   --red-light: #ffced5;
+  /* Colors active */
+  --light-dark-active: #202020;
+  --white-active: #fff;
   /* Change Root Font */
   font-size: 9px;
 }
@@ -438,8 +441,8 @@ ul.nav-list .user a.nav-link {
 }
 
 .active-light-dark {
-  color: var(--white) !important;
-  background-color: var(--light-dark) !important;
+  color: var(--white-active) !important;
+  background-color: var(--light-dark-active) !important;
 }
 
 /* Images */

@@ -66,7 +66,7 @@ function subscriptionsUi(subscriptions) {
   let allSubscriptions = subscriptions.map((sub) => {
     return `
                 <li class="trn-3 hover-light-3">
-                    <a href="#">
+                    <a href="${sub.link}" target="_blank">
                         <div class="subscriptions-img circle-img img-4">
                             <img src="${sub.image}" alt="subscriptions image">
                         </div>
@@ -103,11 +103,13 @@ function sidebarToggle(e) {
       setTimeout(() => {
         sidebar.style.display = "none";
       }, 300);
+      document.body.style.overflow = "auto";
     } else {
       sidebar.style.transform = "translate(0)";
       setTimeout(() => {
         sidebar.style.display = "block";
       }, 300);
+      document.body.style.overflow = "hidden";
     }
   } else {
     if (sidebar.style.display == "none") {
@@ -162,7 +164,9 @@ function darkmode(e) {
       "#fff",
       "#d3d3d3",
       "#4C292D",
-      "images/logos/youtube-logo-dark.png"
+      "images/logos/youtube-logo-dark.png",
+      "#fff",
+      "#202020"
     );
   } else {
     darkToggleIcon.classList.toggle("fa-toggle-on");
@@ -172,17 +176,33 @@ function darkmode(e) {
       "#181818",
       "#676767",
       "#ffced5",
-      "images/logos/youtube-logo-light.png"
+      "images/logos/youtube-logo-light.png",
+      "#202020",
+      "#fff"
     );
   }
 }
 
-function setMode(bgLight, bgWhite, dark, darkGray, redLight, imgSrc) {
+function setMode(
+  bgLight,
+  bgWhite,
+  dark,
+  darkGray,
+  redLight,
+  imgSrc,
+  LightdarkActive,
+  whiteActive
+) {
   document.documentElement.style.setProperty("--bg-light", bgLight);
   document.documentElement.style.setProperty("--bg-white", bgWhite);
   document.documentElement.style.setProperty("--dark", dark);
   document.documentElement.style.setProperty("--dark-gray", darkGray);
   document.documentElement.style.setProperty("--red-light", redLight);
+  document.documentElement.style.setProperty(
+    "--light-dark-active",
+    LightdarkActive
+  );
+  document.documentElement.style.setProperty("--white-active", whiteActive);
   youtubeLogo.src = imgSrc;
 }
 
@@ -302,9 +322,6 @@ function prevCategory() {
   }
 }
 
-/****  Home page ads on mobile ****/
-let adsImage = document.querySelector(".ads-image img");
-
 /****  Videos Draw Ui****/
 let videosContentDom = document.querySelector(".videos-content");
 
@@ -312,7 +329,7 @@ async function getVideos() {
   const response = await fetch("videos.json");
   const data = await response.json();
 
-  // Subscriptions Ui
+  // videosUi Ui
   videosUi(data);
 }
 

@@ -1,6 +1,6 @@
 [
     {
-        "video_thumbnail":"images/videos/elzero-v-1.png",
+        "video_thumbnail":"images/videos/elzero-v-1.jpg",
         "channel_image":"images/subscriptions/elzero.jpg",
         "video_time":"07:20",
         "video_name":"[Arabic] HTML & CSS Template One 2021 - #11 - Create About Section Part 2",
@@ -30,7 +30,7 @@
         "video_published_date":"4 month ago"
     },
     {
-        "video_thumbnail":"images/videos/devlogs-v-1.png",
+        "video_thumbnail":"images/videos/devlogs-v-1.jpg",
         "channel_image":"images/subscriptions/youssef-devlogs.jpg",
         "video_time":"1:48:13",
         "video_name":"مشروع برمجة Todolist App | javascript",
@@ -40,7 +40,7 @@
         "video_published_date":"3 min ago"
     },
     {
-        "video_thumbnail":"images/videos/devlogs-v-2.png",
+        "video_thumbnail":"images/videos/devlogs-v-2.jpg",
         "channel_image":"images/subscriptions/youssef-devlogs.jpg",
         "video_time":"07:17",
         "video_name":"الفرق بين Photoshop | illustrator | Indesign",
