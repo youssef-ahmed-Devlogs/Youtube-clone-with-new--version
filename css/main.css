@@ -50,6 +50,9 @@ aside {
   margin-right: 20px;
   width: 17%;
   position: fixed;
+  z-index: 3;
+  top: 20px;
+  height: 96%;
   padding: 0 0 20px;
   background-color: var(--bg-white);
 }
@@ -103,6 +106,7 @@ aside h5 {
 
 .homepage {
   width: 83%;
+  height: 100%;
   padding-left: 30px;
   margin: 0 0 0 auto;
 }
@@ -367,7 +371,7 @@ ul.nav-list .user a.nav-link {
 
 .videos-content {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(5, 1fr);
   gap: 25px;
 }
 
@@ -435,7 +439,7 @@ ul.nav-list .user a.nav-link {
 
 .active-light-dark {
   color: var(--white) !important;
-  background-color: var(--bg-light-dark) !important;
+  background-color: var(--light-dark) !important;
 }
 
 /* Images */

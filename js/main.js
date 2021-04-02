@@ -88,30 +88,42 @@ function subscriptionsUi(subscriptions) {
 getSubscription();
 
 /**** Sidebar Toggle ****/
-let sidebar = document.getElementById("sidebar");
 let homepage = document.querySelector(".homepage");
 let sidebarBtn = document.querySelector(".sidebar-btn");
-let isSidebarOpen = true;
+let sidebar = document.getElementById("sidebar");
 
 sidebarBtn.addEventListener("click", sidebarToggle);
 
 function sidebarToggle(e) {
   e.preventDefault();
-  if (isSidebarOpen) {
-    sidebar.style.transform = "translate(-100%)";
-    homepage.style.width = "100%";
-    setTimeout(() => {
-      sidebar.style.display = "none";
-    }, 300);
-  } else {
-    sidebar.style.transform = "translate(0)";
-    homepage.style.width = "83%";
-    setTimeout(() => {
-      sidebar.style.display = "block";
-    }, 300);
-  }
 
-  isSidebarOpen = !isSidebarOpen;
+  if (window.innerWidth <= 1460) {
+    if (sidebar.style.display == "block") {
+      sidebar.style.transform = "translate(-100%)";
+      setTimeout(() => {
+        sidebar.style.display = "none";
+      }, 300);
+    } else {
+      sidebar.style.transform = "translate(0)";
+      setTimeout(() => {
+        sidebar.style.display = "block";
+      }, 300);
+    }
+  } else {
+    if (sidebar.style.display == "none") {
+      sidebar.style.transform = "translate(0)";
+      homepage.style.width = "83%";
+      setTimeout(() => {
+        sidebar.style.display = "block";
+      }, 300);
+    } else {
+      sidebar.style.transform = "translate(-100%)";
+      homepage.style.width = "100%";
+      setTimeout(() => {
+        sidebar.style.display = "none";
+      }, 300);
+    }
+  }
 }
 
 /**** Nav >> User ****/
@@ -239,6 +251,20 @@ function notificationSettings(e) {
   isNotificationOpen = !isNotificationOpen;
 }
 
+// class isOpen {
+//   constructor() {
+//     this.open = false;
+//   }
+
+//   toggle() {
+//     if (!this.open) {
+//       console.log();
+//     } else {
+//     }
+//     this.open = !this.open;
+//   }
+// }
+
 /****  Category Sweper ****/
 let nextBtn = document.querySelector(".next-btn");
 let prevBtn = document.querySelector(".prev-btn");
@@ -268,16 +294,57 @@ function prevCategory() {
   }
 }
 
-// class isOpen {
-//   constructor() {
-//     this.open = false;
-//   }
+/****  Videos Draw Ui****/
+let videosContentDom = document.querySelector(".videos-content");
 
-//   toggle() {
-//     if (!this.open) {
-//       console.log();
-//     } else {
-//     }
-//     this.open = !this.open;
-//   }
-// }
+async function getVideos() {
+  const response = await fetch("videos.json");
+  const data = await response.json();
+
+  // Subscriptions Ui
+  videosUi(data);
+}
+
+function videosUi(videos) {
+  let allVideos = videos.map((video) => {
+    return `
+                <a href="${video.video_link}"
+                   target="_blank"
+                   class="video-item border-radius2"
+                   style="order: 
+                   ${Math.floor(Math.random() * videos.length)}">
+                <div class="video-thumbnail-container">
+                  <div class="video-thumbnail">
+                    <img
+                      class="img-w100 border-radius2"
+                      src="${video.video_thumbnail}"
+                      alt="elzero-v-1"
+                    />
+                  </div>
+                  <div class="channel-image border-radius2 img-6">
+                    <img
+                      class="img-w100 border-radius2"
+                      src="${video.channel_image}"
+                      alt="elzero"
+                    />
+                  </div>
+                  <span class="video-time border-radius1">${
+                    video.video_time
+                  }</span>
+                </div>
+                <div class="video-name">${video.video_name}</div>
+                <div class="channel-name">${video.channel_name}</div>
+                <div class="video-info">
+                  <span class="video-views">${video.video_views} Views . </span>
+                  <span class="video-published-date">${
+                    video.video_published_date
+                  }</span>
+                </div>
+              </a>
+            `;
+  });
+
+  videosContentDom.innerHTML = allVideos.join("");
+}
+
+getVideos();
