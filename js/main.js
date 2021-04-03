@@ -1,91 +1,47 @@
+//import class DrawNotifications for get notifications
+import DrawSubscriptions from "./DrawSubscriptions.js"; // Automatic execute after import in the class file
+
+//import class DrawNotifications for get notifications
+import DrawNotifications from "./DrawNotifications.js";
+
+// import class DrawVideos for get Videos
+import DrawVideos from "./DrawVideos.js"; // Automatic execute after import in the class file
+
+// import class ShowMore for ShowMore
+import ShowMore from "./ShowMore.js";
+
 /**** Sidebar >> Show More ****/
-// Youtube Pages List
-let showMoreYtPages = document.querySelector(".side-yt-pages-list .show-more");
+// show more Youtube Pages List
+let show_more_btn_YtPages = document.querySelector(
+  ".side-yt-pages-list .show-more"
+);
 let moreYtPages = document.querySelector(".side-yt-pages-list .more");
-// Subscriptions
-let showMoreSubscriptions = document.querySelector(
+// show more Subscriptions
+let show_more_btn_subscriptions = document.querySelector(
   ".side-subscriptions-list .show-more"
 );
 let moreSubscriptionsList = document.querySelector(
   ".side-subscriptions-list .more"
 );
-// More From Youtube List
-let showMoreFromYtList = document.querySelector(
+// show more More From Youtube List
+let show_more_btn_moreFromYtList = document.querySelector(
   ".side-more-from-yt-list .show-more"
 );
 let moreFromYtList = document.querySelector(".side-more-from-yt-list .more");
 
-class showMore {
-  constructor() {
-    this.isShow = false;
-  }
+let youtubeList = new ShowMore();
+let subscriptions = new ShowMore();
+let FromYtList = new ShowMore();
 
-  show(moreList, moreButton) {
-    if (!this.isShow) {
-      this.setShow(moreList, moreButton, "block", "fa-caret-up", "Show Less");
-      moreList.style.animation = "fadeIn .5s ease-in-out";
-    } else {
-      this.setShow(moreList, moreButton, "none", "fa-caret-up", "Show More");
-    }
-    this.isShow = !this.isShow;
-  }
-
-  setShow(moreList, moreButton, display, toggleClass, textShow) {
-    moreList.style.display = display;
-    moreButton.children[0].classList.toggle(toggleClass);
-    moreButton.children[1].textContent = textShow;
-  }
-}
-
-let youtubeList = new showMore();
-let subscriptions = new showMore();
-let FromYtList = new showMore();
-
-showMoreYtPages.addEventListener("click", () =>
-  youtubeList.show(moreYtPages, showMoreYtPages)
+show_more_btn_YtPages.addEventListener("click", () =>
+  youtubeList.show(moreYtPages, show_more_btn_YtPages)
 );
-showMoreSubscriptions.addEventListener("click", () =>
-  subscriptions.show(moreSubscriptionsList, showMoreSubscriptions)
+show_more_btn_subscriptions.addEventListener("click", () =>
+  subscriptions.show(moreSubscriptionsList, show_more_btn_subscriptions)
 );
-showMoreFromYtList.addEventListener("click", () =>
-  FromYtList.show(moreFromYtList, showMoreFromYtList)
+show_more_btn_moreFromYtList.addEventListener("click", () =>
+  FromYtList.show(moreFromYtList, show_more_btn_moreFromYtList)
 );
-
-/**** Sidebar >> Subscriptions Ui ****/
-let subscriptionsParentDom = document.querySelector(".subscriptions");
-
-async function getSubscription() {
-  const response = await fetch("subscriptions.json");
-  const data = await response.json();
-
-  // Subscriptions Ui
-  subscriptionsUi(data);
-}
-
-function subscriptionsUi(subscriptions) {
-  let allSubscriptions = subscriptions.map((sub) => {
-    return `
-                <li class="trn-3 hover-light-3">
-                    <a href="${sub.link}" target="_blank">
-                        <div class="subscriptions-img circle-img img-4">
-                            <img src="${sub.image}" alt="subscriptions image">
-                        </div>
-                        ${sub.name}
-                    </a>
-                </li>
-            `;
-  });
-
-  allSubscriptions.forEach((sub, index) => {
-    if (index < 4) {
-      subscriptionsParentDom.innerHTML += sub;
-    } else {
-      moreSubscriptionsList.innerHTML += sub;
-    }
-  });
-}
-
-getSubscription();
 
 /**** Sidebar Toggle ****/
 let homepage = document.querySelector(".homepage");
@@ -206,52 +162,6 @@ function setMode(
   youtubeLogo.src = imgSrc;
 }
 
-/**** Nav >> Notifications Ui ****/
-let notificationsDom = document.querySelector(
-  ".notification-settings .content"
-);
-
-async function getNotifications() {
-  const response = await fetch("notification.json");
-  const data = await response.json();
-
-  // Subscriptions Ui
-  notificationUi(data);
-}
-
-function notificationUi(notifications) {
-  let allNotification = notifications.map((noti) => {
-    return `
-                  <li class="hover-light-3 trn-4">
-                      <a href="#" class="notification">
-                      <div class="notification-subscription img-10 circle-img">
-                          <img src="${noti.image}" alt="" />
-                      </div>
-                      <p class="notification-description">
-                          تم تحميل الفيديو
-                          <span class="video-name">
-                          ${noti.video_name}
-                          </span>
-                          الي قناة
-                          <span class="subscription-name">
-                          ${noti.name}
-                          </span>
-                      </p>
-                      <div class="notification-video img-30">
-                          <img
-                          src="${noti.video_image}"
-                          class="img-w100"
-                          alt=""
-                          />
-                      </div>
-                      </a>
-                  </li>
-            `;
-  });
-
-  notificationsDom.innerHTML = allNotification.join("");
-}
-
 /**** Nav >> Notifications Settings ****/
 let navNotificationBtn = document.querySelector(".notification-btn");
 let notificationSettingsDom = document.querySelector(".notification-settings");
@@ -264,7 +174,7 @@ function notificationSettings(e) {
   if (!isNotificationOpen) {
     notificationSettingsDom.style.display = "block";
     notificationSettingsDom.style.animation = "fadeIn .5s ease-in-out";
-    getNotifications();
+    new DrawNotifications();
   } else {
     notificationSettingsDom.style.display = "none";
   }
@@ -279,18 +189,22 @@ let navVideoIcon = document.querySelector(".nav-video-icon");
 let searchIcon = document.querySelector(".nav-search-icon");
 // Exists sidebarBtn
 
-console.log(sidebarBtn);
-
 searchIcon.addEventListener("click", toggleSearch);
 
 function toggleSearch(e) {
   e.preventDefault();
   searchInput.classList.toggle("m-700-show-search");
   searchInput.style.animation = "fadeIn .5s ease-in-out";
-  nav_user_Icon.classList.toggle("m-700-hide");
-  navNotiIcon.classList.toggle("m-700-hide");
-  navVideoIcon.classList.toggle("m-700-hide");
-  sidebarBtn.classList.toggle("m-700-hide");
+
+  let toggleSearchClasses = [
+    nav_user_Icon,
+    navNotiIcon,
+    navVideoIcon,
+    sidebarBtn,
+  ];
+  toggleSearchClasses.forEach((item) => {
+    item.classList.toggle("m-700-hide");
+  });
 }
 
 /****  Category Sweper ****/
@@ -321,58 +235,3 @@ function prevCategory() {
     categoryContent.style.transform = `translateX(${moveing}px)`;
   }
 }
-
-/****  Videos Draw Ui****/
-let videosContentDom = document.querySelector(".videos-content");
-
-async function getVideos() {
-  const response = await fetch("videos.json");
-  const data = await response.json();
-
-  // videosUi Ui
-  videosUi(data);
-}
-
-function videosUi(videos) {
-  let allVideos = videos.map((video) => {
-    return `
-                <a href="${video.video_link}"
-                   target="_blank"
-                   class="video-item border-radius2"
-                   style="order: 
-                   ${Math.floor(Math.random() * videos.length)}">
-                <div class="video-thumbnail-container">
-                  <div class="video-thumbnail">
-                    <img
-                      class="img-w100 border-radius2"
-                      src="${video.video_thumbnail}"
-                      alt="elzero-v-1"
-                    />
-                  </div>
-                  <div class="channel-image border-radius2 img-6">
-                    <img
-                      class="img-w100 border-radius2"
-                      src="${video.channel_image}"
-                      alt="elzero"
-                    />
-                  </div>
-                  <span class="video-time border-radius1">${
-                    video.video_time
-                  }</span>
-                </div>
-                <div class="video-name">${video.video_name}</div>
-                <div class="channel-name">${video.channel_name}</div>
-                <div class="video-info">
-                  <span class="video-views">${video.video_views} Views . </span>
-                  <span class="video-published-date">${
-                    video.video_published_date
-                  }</span>
-                </div>
-              </a>
-            `;
-  });
-
-  videosContentDom.innerHTML = allVideos.join("");
-}
-
-getVideos();

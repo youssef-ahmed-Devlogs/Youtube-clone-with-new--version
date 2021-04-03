@@ -232,3 +232,15 @@
     display: block;
   }
 }
+
+@media (max-width: 550px) {
+  .img-m-w {
+    width: 200px;
+  }
+}
+
+@media (max-width: 300px) {
+  .img-m-w {
+    width: 150px;
+  }
+}
