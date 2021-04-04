@@ -7,7 +7,8 @@
         "video_link":"https://youtu.be/Q8whJnz1GoY",
         "channel_name":"Elzero Web School",
         "video_views":"30M",
-        "video_published_date":"2 days ago"
+        "video_published_date":"2 days ago",
+        "verification_mark": true
     },
     {
         "video_thumbnail":"images/videos/elzero-v-2.jpg",
@@ -17,7 +18,8 @@
         "video_link":"https://youtu.be/aKSZ9AyShlI",
         "channel_name":"Elzero Web School",
         "video_views":"602k",
-        "video_published_date":"2 week ago"
+        "video_published_date":"2 week ago",
+        "verification_mark": true
     },
     {
         "video_thumbnail":"images/videos/elzero-v-3.jpg",
@@ -27,7 +29,8 @@
         "video_link":"https://youtu.be/9QC-PFHo8Yw",
         "channel_name":"Elzero Web School",
         "video_views":"6M",
-        "video_published_date":"4 month ago"
+        "video_published_date":"4 month ago",
+        "verification_mark": true
     },
     {
         "video_thumbnail":"images/videos/devlogs-v-1.jpg",
@@ -57,7 +60,8 @@
         "video_link":"https://youtu.be/6tTGaNZf6ZY",
         "channel_name":"دروس أونلاين",
         "video_views":"23M",
-        "video_published_date":"2 month ago"
+        "video_published_date":"2 month ago",
+        "verification_mark": true
     },
     {
         "video_thumbnail":"images/videos/droosonline-v-2.jpg",
@@ -67,7 +71,8 @@
         "video_link":"https://youtu.be/5wpp3vFM41U",
         "channel_name":"دروس أونلاين",
         "video_views":"406M",
-        "video_published_date":"5 month ago"
+        "video_published_date":"5 month ago",
+        "verification_mark": true
     },
     {
         "video_thumbnail":"images/videos/amir-mounir-v-1.jpg",
@@ -77,7 +82,8 @@
         "video_link":"https://youtu.be/kcbsTIkS_L8",
         "channel_name":"أمير منير",
         "video_views":"100M",
-        "video_published_date":"1 day ago"
+        "video_published_date":"1 day ago",
+        "verification_mark": true
     },
     {
         "video_thumbnail":"images/videos/omardizer-v-1.jpg",
@@ -87,7 +93,8 @@
         "video_link":"https://youtu.be/6HBpXuMD-y4",
         "channel_name":"Omardizer | عمر ديزر",
         "video_views":"70k",
-        "video_published_date":"2 hours ago"
+        "video_published_date":"2 hours ago",
+        "verification_mark": true
     },
     {
         "video_thumbnail":"images/videos/codezilla-v-1.jpg",
